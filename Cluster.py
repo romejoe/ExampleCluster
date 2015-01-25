@@ -57,7 +57,7 @@ class Cluster:
 
 	def ClusterCSVFile(filepath, verbose=False):
 		points = []
-		with open(sys.argv[1], 'r') as csvfile:
+		with open(filepath, 'r') as csvfile:
 			pointReader = csv.reader(csvfile)
 			for row in pointReader:
 				points.append([list(float(row[i]) for i in range(0, len(row)))])
